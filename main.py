@@ -48,8 +48,8 @@ def _clear():
 
 # Các hàm giả lập cho các lệnh mới
 async def run_checkin(language: str):
-    from scripts.checkin import run_checkin_script
-    await run_checkin_script(language)
+    from scripts.checkin import run_checkin as checkin_run
+    await checkin_run(language)
     
 async def cmd_exit(language: str):
     messages = {"vi": "Đang thoát...", "en": "Exiting..."}
@@ -185,6 +185,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
